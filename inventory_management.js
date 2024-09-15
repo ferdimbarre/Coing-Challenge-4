@@ -65,3 +65,16 @@ return totalValueOfProducts;
 }; 
 console.log(`The total value of the products is $${calculateInventoryValue(inventory)}`);
 // expected output: The total value of products is $12300
+
+// Create a Function to Process a Sale
+function processSale (inventory, input) {
+let findProduct = inventory.find(product => product.name === input)// just to see if there is a product with the name in the input in the inventory
+if (findProduct !== undefined) {
+    console.log(updateStock(inventory)); 
+} else { console.log("Error: product not in stock") 
+}; 
+return processSale(inventory)
+}; 
+
+
+
