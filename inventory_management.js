@@ -38,3 +38,14 @@ return displayProductDetails; // returns function
 
 inventory.forEach(inventory => displayProductDetails(inventory)) // uses forEach function to iterate over the array and log the products in the phrase prepared in the function. Expected output example: Lipstick is priced at $30 with current quantity of 100 which means it is Low Stock
     
+// Create a Function to Update Product Stock After Sales
+function updateStock(product) { 
+    let newProductQuantity = product.quantity -= unitsSold // create variable to update the quantity of products
+   // use if-else to update the message based on new quantity
+    if (newProductQuantity > inventory.lowStockLevel) {
+        console.log("In Stock") ;
+    } else if (lowStockLevel > newProductQuantity > 0)
+    console.log(`Low Stock`) ;
+    else { console.log("outOfStock")
+    return updateStock // return the function
+} };
