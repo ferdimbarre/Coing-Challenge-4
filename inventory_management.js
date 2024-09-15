@@ -53,7 +53,7 @@ function updateStock(product) {
 // Create a Function to Check Low Stock Products
 function checkLowStock(product) {
 if (product.quantity < product.lowStockLevel) { 
-    console.log(`${product.name} : "This product is low in stock!"`)
+    console.log(`${product.name} : "This product is low in stock!"`) //expected output: hat: This productis low in stock! lipstick: this product is low in stock!
     return checkLowStock
 }
-}
+} ;
