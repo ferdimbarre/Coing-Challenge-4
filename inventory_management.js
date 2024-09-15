@@ -53,7 +53,15 @@ function updateStock(product) {
 // Create a Function to Check Low Stock Products
 function checkLowStock(product) {
 if (product.quantity < product.lowStockLevel) { 
-    console.log(`${product.name} : "This product is low in stock!"`) //expected output: hat: This productis low in stock! lipstick: this product is low in stock!
+    console.log(`${product.name} : "This product is low in stock!"`); //expected output: hat: This productis low in stock! lipstick: this product is low in stock!
     return checkLowStock
 }
 } ;
+
+// Create a Function to Calculate Total Inventory Value
+function calculateInventoryValue(inventory) { 
+let totalValueOfProducts = inventory.reduce((total, product) => total + (product.price * product.quantity), 0);
+return totalValueOfProducts; 
+}; 
+console.log(`The total value of the products is $${calculateInventoryValue(inventory)}`);
+// expected output: The total value of products is $12300
